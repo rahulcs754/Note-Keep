@@ -1,6 +1,7 @@
+import styles from "./Login.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuthData } from "../Context/AuthContext";
+import { useAuthData } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { loginCheck, guestEntry } from "fronted/utils/Login";
 
@@ -51,8 +52,8 @@ export const Login = () => {
   };
 
   return (
-    <div className={`flex flex-center login_box`}>
-      <form className="login_form" onSubmit={submitHandler}>
+    <div className={`flex flex-center ${styles.login_box}`}>
+      <form className={styles.login_form} onSubmit={submitHandler}>
         <div className="login-title f-m text-center">📓</div>
         <div className="login-title f-m text-center">Login </div>
         <div className="text-danger text-center">{error ?? error}</div>
