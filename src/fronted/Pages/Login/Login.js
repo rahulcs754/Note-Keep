@@ -54,7 +54,9 @@ export const Login = () => {
   return (
     <div className={`flex flex-center ${styles.login_box}`}>
       <form className={styles.login_form} onSubmit={submitHandler}>
-        <div className="login-title f-m text-center">📓</div>
+        <div className="flex flex-center">
+          <img src="https://img.icons8.com/nolan/64/note.png" />
+        </div>
         <div className="login-title f-m text-center">Login </div>
         <div className="text-danger text-center">{error ?? error}</div>
         <div className="input-box">
