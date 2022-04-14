@@ -1,9 +1,9 @@
-import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuthData } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { loginCheck, guestEntry } from "fronted/utils/Login";
+
 export const Login = () => {
   const navigate = useNavigate();
 
@@ -29,35 +29,9 @@ export const Login = () => {
   };
 
   // submit handler
-  const submitHandler = async (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(`/api/auth/login`, {
-        email,
-        password,
-      });
-
-      if (response.status === 200 || response.status === 201) {
-        const { encodedToken, foundUser } = response.data;
-        DispatchUserAuth({
-          type: "LOGIN_SUCCESS",
-          encodedToken: encodedToken,
-          userDetails: foundUser,
-        });
-        localStorage.setItem("encodedToken", encodedToken);
-        localStorage.setItem("Firstname", foundUser.firstName);
-        toast.success("You are successfully logged in", {
-          position: "bottom-right",
-          autoClose: 3000,
-        });
-        navigate("/products/All Product");
-      }
-    } catch (err) {
-      toast.warning("Login failed wrong user credentials", {
-        position: "bottom-right",
-        autoClose: 3000,
-      });
-    }
+    loginCheck(email, password, navigate, DispatchUserAuth);
   };
 
   // password view
@@ -72,33 +46,15 @@ export const Login = () => {
   };
 
   //set default entry for login
-  const handlerGuestEntry = async () => {
-    const response = await axios.post(`/api/auth/login`, {
-      email: "adarshbalika@gmail.com",
-      password: "adarshBalika123",
-    });
-
-    if (response.status === 200 || response.status === 201) {
-      const { encodedToken, foundUser } = response.data;
-      DispatchUserAuth({
-        type: "LOGIN_SUCCESS",
-        encodedToken: encodedToken,
-        userDetails: foundUser,
-      });
-      localStorage.setItem("encodedToken", encodedToken);
-      localStorage.setItem("Firstname", foundUser.firstName);
-      toast.success("You are successfully logged in", {
-        position: "bottom-right",
-        autoClose: 3000,
-      });
-      navigate("/Homepage");
-    }
+  const handlerGuestEntry = () => {
+    guestEntry(navigate, DispatchUserAuth);
   };
 
   return (
     <div className={`flex flex-center login_box`}>
       <form className="login_form" onSubmit={submitHandler}>
-        <div className="login-title f-m text-center">Login</div>
+        <div className="login-title f-m text-center">📓</div>
+        <div className="login-title f-m text-center">Login </div>
         <div className="text-danger text-center">{error ?? error}</div>
         <div className="input-box">
           <label className="label-text ">Email Address</label>
