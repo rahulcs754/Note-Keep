@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuthData } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { loginCheck, guestEntry } from "frontend/utils/Login";
+import { loginCheck, guestEntry } from "../../utils/Login";
 
 export const Login = () => {
   const navigate = useNavigate();

@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "frontend/Context";
+import { AuthProvider } from "./frontend/Context";
 
 // Call make Server
 makeServer();
