@@ -103,7 +103,7 @@ export const Login = () => {
           >
             Guest Entry
           </button>
-          <button className="btn btn-primary d-inline">
+          <button className="btn btn-primary d-inline" type="button">
             <Link to="/signup">Create New Account </Link>
           </button>
         </div>
