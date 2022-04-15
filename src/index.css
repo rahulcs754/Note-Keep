@@ -41,6 +41,14 @@
   padding: 0.3rem;
 }
 
+/* button css change*/
+.btn {
+  border-radius: 6px;
+}
+.btn-primary {
+  background-color: var(--var-blue);
+}
+
 /* this will provide in ci later */
 .grid-container {
   display: grid;
