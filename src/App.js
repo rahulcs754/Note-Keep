@@ -1,4 +1,4 @@
-import Routespaths from "./fronted/Router";
+import Routespaths from "./frontend/Router";
 function App() {
   return (
     <div className="App">
