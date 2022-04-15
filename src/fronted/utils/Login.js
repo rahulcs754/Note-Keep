@@ -20,7 +20,7 @@ const loginCheck = async (email, password, navigate, DispatchUserAuth) => {
         position: "bottom-right",
         autoClose: 3000,
       });
-      navigate("/products/All Product");
+      navigate("/Homepage");
     }
   } catch (err) {
     toast.warning("Login failed wrong user credentials", {
