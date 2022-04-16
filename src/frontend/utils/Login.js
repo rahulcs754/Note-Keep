@@ -8,7 +8,7 @@ const loginCheck = async (email, password, navigate, DispatchUserAuth) => {
     });
 
     if (response.status === 200 || response.status === 201) {
-      const { encodedToken, foundUser } = response.data;
+      const { encodedToken, foundUser } = response?.data;
       DispatchUserAuth({
         type: "LOGIN_SUCCESS",
         encodedToken: encodedToken,
@@ -37,8 +37,8 @@ const guestEntry = async (navigate, DispatchUserAuth) => {
       encodedToken: encodedToken,
       userDetails: foundUser,
     });
-    localStorage.setItem("encodedToken", encodedToken);
-    localStorage.setItem("Firstname", foundUser.firstName);
+    localStorage.setItem("rsnote_encodedToken", encodedToken);
+    localStorage.setItem("rsnote_Firstname", foundUser.firstName);
     toast.success("You are successfully logged in");
     navigate("/Homepage");
   }

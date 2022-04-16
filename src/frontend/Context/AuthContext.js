@@ -11,6 +11,7 @@ const AuthProvider = ({ children }) => {
     userDetails: {},
     archives: [],
     notes: [],
+    trash: [],
     loading: false,
     message: null,
   };

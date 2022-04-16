@@ -13,7 +13,8 @@ export const AuthReducer = (state, action) => {
         message: "",
         isUserLoggedIn: true,
         encodedToken: action.encodedToken,
-        userDetails: action.userDetails,
+        archives: action.userDetails.archives,
+        notes: action.userDetails.notes,
       };
     case "LOGOUT":
       localStorage.clear("rsnote_encodedToken");

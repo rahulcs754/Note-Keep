@@ -32,9 +32,16 @@ export const signupCheck = async (setSignupForm, signupForm, navigate) => {
             ...prev,
             isValid: true,
           }));
-          localStorage.setItem("token", response.data.encodedToken);
+          localStorage.setItem(
+            "rsnote_encodedToken",
+            response?.data?.encodedToken
+          );
+          localStorage.setItem(
+            "rsnote_Firstname",
+            response?.data?.createdUser?.firstName
+          );
           setTimeout(() => {
-            navigate("/");
+            navigate("/homepage");
           }, 3000);
         } else if (response.status === 500) {
           toast.warning("Oops Something went wrong");
