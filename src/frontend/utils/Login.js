@@ -14,8 +14,8 @@ const loginCheck = async (email, password, navigate, DispatchUserAuth) => {
         encodedToken: encodedToken,
         userDetails: foundUser,
       });
-      localStorage.setItem("encodedToken", encodedToken);
-      localStorage.setItem("Firstname", foundUser.firstName);
+      localStorage.setItem("rsnote_encodedToken", encodedToken);
+      localStorage.setItem("rsnote_Firstname", foundUser.firstName);
       toast.success("You are successfully logged in");
       navigate("/Homepage");
     }

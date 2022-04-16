@@ -16,7 +16,9 @@ export const AuthReducer = (state, action) => {
         userDetails: action.userDetails,
       };
     case "LOGOUT":
-      localStorage.clear();
+      localStorage.clear("rsnote_encodedToken");
+      localStorage.clear("rsnote_Firstname");
+
       return {
         ...state,
         loading: false,
