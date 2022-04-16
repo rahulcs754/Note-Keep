@@ -14,19 +14,13 @@ const loginCheck = async (email, password, navigate, DispatchUserAuth) => {
         encodedToken: encodedToken,
         userDetails: foundUser,
       });
-      localStorage.setItem("encodedToken", encodedToken);
-      localStorage.setItem("Firstname", foundUser.firstName);
-      toast.success("You are successfully logged in", {
-        position: "bottom-right",
-        autoClose: 3000,
-      });
+      localStorage.setItem("rsnote_encodedToken", encodedToken);
+      localStorage.setItem("rsnote_Firstname", foundUser.firstName);
+      toast.success("You are successfully logged in");
       navigate("/Homepage");
     }
   } catch (err) {
-    toast.warning("Login failed wrong user credentials", {
-      position: "bottom-right",
-      autoClose: 3000,
-    });
+    toast.warning("Login failed wrong user credentials");
   }
 };
 
@@ -45,10 +39,7 @@ const guestEntry = async (navigate, DispatchUserAuth) => {
     });
     localStorage.setItem("encodedToken", encodedToken);
     localStorage.setItem("Firstname", foundUser.firstName);
-    toast.success("You are successfully logged in", {
-      position: "bottom-right",
-      autoClose: 3000,
-    });
+    toast.success("You are successfully logged in");
     navigate("/Homepage");
   }
 };
