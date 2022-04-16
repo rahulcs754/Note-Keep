@@ -1,3 +1,3 @@
-export { Homepage } from "./Homepage";
+export { Homepage } from "./Homepage/Homepage";
 export { Login } from "./Login/Login";
-export { Register } from "./Register";
+export { Register } from "./Signup/Register";

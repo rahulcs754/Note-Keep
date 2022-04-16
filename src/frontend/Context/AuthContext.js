@@ -9,6 +9,9 @@ const AuthProvider = ({ children }) => {
     isUserLoggedIn: false,
     encodedToken: "",
     userDetails: {},
+    archives: [],
+    notes: [],
+    trash: [],
     loading: false,
     message: null,
   };

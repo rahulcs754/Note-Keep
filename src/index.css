@@ -1,6 +1,7 @@
 :root {
   --var-orange: #f5ab35;
   --var-blue: #4183d7;
+  --body-color: #ffffff;
 }
 
 /* Active link */
@@ -18,21 +19,6 @@
 
 .pointer {
   cursor: pointer;
-}
-
-.signup-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  width: 100%;
-  height: 80vh;
-}
-
-.signup-form {
-  padding: 1rem 2rem;
-  min-width: 30%;
-  border: 1px solid var(--light-black);
 }
 
 .icon-gray {
@@ -54,6 +40,14 @@
 }
 .card-info {
   padding: 0.3rem;
+}
+
+/* button css change*/
+.btn {
+  border-radius: 6px;
+}
+.btn-primary {
+  background-color: var(--var-blue);
 }
 
 /* this will provide in ci later */
