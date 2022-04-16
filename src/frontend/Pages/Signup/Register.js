@@ -1,6 +1,6 @@
 import styles from "./Register.module.css";
 import { useState } from "react";
-import { signupCheck } from "fronted/utils/Signup";
+import { signupCheck } from "frontend/utils/Signup";
 import { useNavigate, Link } from "react-router-dom";
 
 export const Register = () => {

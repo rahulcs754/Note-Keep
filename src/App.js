@@ -1,4 +1,4 @@
-import Routespaths from "fronted/Router";
+import Routespaths from "frontend/Router";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
