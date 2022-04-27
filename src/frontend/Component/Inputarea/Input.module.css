@@ -1,0 +1,57 @@
+.note_input_box {
+  width: 50%;
+  margin: 0 auto;
+  font-family: "Gudea", sans-serif;
+  border-radius: 5px;
+  border: 1px solid var(--var-blue);
+}
+
+.input_header {
+  border-bottom: 1px solid var(--var-blue);
+}
+
+.input_header input {
+  width: 100%;
+  padding: 0.8rem;
+  font-family: 0.8rem;
+  border-radius: 5px;
+  font-family: "Gudea", sans-serif;
+  font-weight: 600;
+}
+
+.input_body textarea {
+  margin: 0px;
+  border: 0px;
+  border-radius: 0px;
+  padding: 0.8rem;
+}
+
+.input_footer {
+  border-radius: 0px 0px 5px 5px;
+  color: #fff;
+  padding: 0.5rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: var(--var-blue);
+}
+
+.left_footer {
+  flex-basis: 50%;
+  gap: 1rem;
+}
+
+.right_footer {
+  flex-basis: 50%;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 769px) {
+  .note_input_box {
+    width: 90%;
+    margin: 0 auto;
+    font-family: "Gudea", sans-serif;
+    border-radius: 5px;
+    border: 1px solid var(--var-blue);
+  }
+}

@@ -1,7 +1,18 @@
+/* Font family */
+@import url("https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap");
+
 :root {
   --var-orange: #f5ab35;
   --var-blue: #4183d7;
   --body-color: #ffffff;
+}
+
+body {
+  font-family: "Gudea", sans-serif;
+}
+
+.modal {
+  background-color: unset;
 }
 
 /* Active link */
@@ -40,6 +51,10 @@
 }
 .card-info {
   padding: 0.3rem;
+}
+
+.menu ul li {
+  justify-content: center;
 }
 
 /* button css change*/
@@ -125,6 +140,34 @@
 }
 .btn {
   font-size: 0.8rem;
+}
+
+/* scroll bar css */
+
+.scrollbar {
+  background: #f5f5f5;
+  overflow-y: scroll;
+}
+
+/*
+ *  STYLE 3
+ */
+
+#style-3::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  height: 6px;
+}
+
+#style-3::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+  height: 6px;
+}
+
+#style-3::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  height: 6px;
 }
 
 /* Loader css */
