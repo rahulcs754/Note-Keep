@@ -46,7 +46,7 @@
   box-shadow: 3px 3px 3px var(--var-blue);
 }
 
-@media screen and (max-width: 47.5rem) {
+@media screen and (max-width: 769px) {
   .filter_list {
     height: 2.8rem;
     width: 40%;

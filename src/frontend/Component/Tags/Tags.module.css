@@ -2,7 +2,7 @@
   width: 15%;
 }
 
-@media screen and (max-width: 47.5rem) {
+@media screen and (max-width: 769px) {
   .modal_s {
     width: 45%;
   }

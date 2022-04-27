@@ -9,7 +9,7 @@
   height: 2rem;
 }
 
-@media screen and (max-width: 47.5rem) {
+@media screen and (max-width: 769px) {
   .colorlist {
     grid-template-columns: 1fr;
   }
