@@ -1,0 +1,57 @@
+.filter_icon_box {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.filter_icon {
+  font-size: 2rem;
+}
+
+.filter_list {
+  position: fixed;
+  width: 25%;
+  height: 2rem;
+  right: 1rem;
+  bottom: 17%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.select_option {
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: 1px solid var(--var-blue);
+}
+
+.select_option option {
+  padding: 0.5rem 0;
+}
+
+.clear_button_box {
+  width: 60%;
+}
+.clear_button {
+  padding: 0.4rem;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid var(--var-blue);
+  cursor: pointer;
+}
+.clear_button:hover {
+  box-shadow: 3px 3px 3px var(--var-blue);
+}
+
+@media screen and (max-width: 47.5rem) {
+  .filter_list {
+    height: 2.8rem;
+    width: 40%;
+  }
+  .filter_icon_box {
+    bottom: 1.5rem;
+  }
+}

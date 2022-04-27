@@ -1,0 +1,19 @@
+.note_slider {
+  margin: 3rem 1rem;
+  display: grid;
+  overflow-x: auto;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(20%, 1fr);
+  grid-gap: 1rem;
+}
+
+@media screen and (max-width: 47.5rem) {
+  .note_slider {
+    margin: 3rem 1rem;
+    display: grid;
+    overflow-x: auto;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-gap: 1rem;
+  }
+}
