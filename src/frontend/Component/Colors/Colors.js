@@ -1,6 +1,10 @@
 import styles from "./Colors.module.css";
 import { colorList } from "./colorList";
-export const Colors = ({ isSet }) => {
+export const Colors = ({ note, isSet, setNote }) => {
+  const clickHandler = (e) => {
+    setNote((prev) => ({ ...prev, color: e.target.value }));
+    isSet();
+  };
   return (
     <div className="modal playlistmodel">
       <div className={` modal-content modal-s ${styles.modal_s}`}>
@@ -12,13 +16,18 @@ export const Colors = ({ isSet }) => {
         </div>
         <div className="modal-body">
           <ul className={`${styles.colorlist} list`}>
-            {colorList.map((color, index) => {
+            {colorList.map((colorn, index) => {
               return (
                 <li key={index} className="list-item-stacked">
-                  <input name="color" value={color} type="radio" />
+                  <input
+                    name="color"
+                    value={colorn}
+                    type="radio"
+                    onClick={clickHandler}
+                  />
                   <div
                     className={styles.box_color}
-                    style={{ backgroundColor: color }}
+                    style={{ backgroundColor: colorn }}
                   ></div>
                 </li>
               );

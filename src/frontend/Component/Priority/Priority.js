@@ -1,4 +1,9 @@
-export const Priority = ({ isSet }) => {
+export const Priority = ({ isSet, setNote }) => {
+  const clickHandler = (e) => {
+    setNote((prev) => ({ ...prev, priority: e.target.value }));
+    isSet();
+  };
+
   return (
     <div className="modal playlistmodel">
       <div className="modal-content modal-s">
@@ -11,15 +16,30 @@ export const Priority = ({ isSet }) => {
         <div className="modal-body">
           <ul className="list">
             <li className="list-item-stacked">
-              <input name="checkbox" type="radio" />
+              <input
+                name="checkbox"
+                type="radio"
+                value="High"
+                onClick={clickHandler}
+              />
               High
             </li>
             <li className="list-item-stacked">
-              <input name="checkbox" type="radio" />
+              <input
+                name="checkbox"
+                type="radio"
+                value="Medium"
+                onClick={clickHandler}
+              />
               Medium
             </li>
             <li className="list-item-stacked">
-              <input name="checkbox" type="radio" />
+              <input
+                name="checkbox"
+                type="radio"
+                value="Low"
+                onClick={clickHandler}
+              />
               Low
             </li>
           </ul>

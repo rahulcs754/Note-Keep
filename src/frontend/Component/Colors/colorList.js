@@ -1,10 +1,10 @@
 export const colorList = [
   "#ff7eb9",
-  "#ff65a3",
-  "#7afcff",
+  "#7874F2",
+  "#0AA1DD",
   "#fff740",
-  "#13cef9",
-  "#5dfffd",
-  "#a9fdff",
+  "#FFD36E",
+  "#FFF56D",
+  "#99FFCD",
   "#017fe6",
 ];

@@ -5,6 +5,9 @@
   align-items: center;
 }
 
+.dark .header_update {
+  box-shadow: 0px 0px 1px 0px var(--white-mint);
+}
 .header_nav_reset {
   align-items: center;
 }

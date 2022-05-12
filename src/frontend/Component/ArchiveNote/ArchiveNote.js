@@ -1,12 +1,12 @@
-import styles from "./Note.module.css";
+import styles from "./ArchiveNote.module.css";
 import { VscTrash } from "react-icons/vsc";
-import { removeNotes } from "frontend/Services";
-import { MdMoreHoriz, MdOutlineEdit } from "react-icons/md";
-import { MdArchive } from "react-icons/md";
-import { addArchives } from "frontend/Services";
-import { useAuthData } from "frontend/Context";
+import { deleteArchivedNote, restoreArchivedNote } from "frontend/Services";
+import { MdMoreHoriz } from "react-icons/md";
 
-export const Note = ({
+import { useAuthData } from "frontend/Context";
+import { MdUnarchive } from "react-icons/md";
+
+export const ArchiveNote = ({
   _id,
   title,
   description,
@@ -46,16 +46,13 @@ export const Note = ({
         <span className={`${styles.remove_icon} pointer`}>
           <MdMoreHoriz className={styles.menu_icons} />
           <div className={`flex flex-row ${styles.monu_show}`}>
-            <MdArchive
+            <MdUnarchive
               size={28}
-              onClick={() => addArchives(currNote, dispatchUserData)}
+              onClick={() => restoreArchivedNote(currNote, dispatchUserData)}
             />
-            <MdOutlineEdit
-              size={28}
-              onClick={() => editNoteHandler(currNote)}
-            />
+
             <VscTrash
-              onClick={() => removeNotes(currNote, dispatchUserData)}
+              onClick={() => deleteArchivedNote(currNote, dispatchUserData)}
               size={28}
             />
           </div>

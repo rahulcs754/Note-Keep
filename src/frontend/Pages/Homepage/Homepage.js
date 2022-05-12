@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Nav, Box, NoteSlider, Filter } from "frontend/Component";
+import { Box, NoteSlider } from "frontend/Component";
 export const Homepage = () => {
   const navigate = useNavigate();
 
@@ -13,10 +13,8 @@ export const Homepage = () => {
 
   return (
     <>
-      <Nav />
       <Box />
       <NoteSlider />
-      <Filter />
     </>
   );
 };

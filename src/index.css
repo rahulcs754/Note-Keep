@@ -7,10 +7,24 @@
   --body-color: #ffffff;
 }
 
-body {
-  font-family: "Gudea", sans-serif;
+/*Theme */
+.dark {
+  background-color: var(--light-black);
+  color: var(--mint-white);
 }
 
+body {
+  font-family: "Gudea", sans-serif;
+  background-color: unset;
+}
+
+.header {
+  background-color: unset;
+}
+
+.dark .header-nav a {
+  color: var(--mint-white);
+}
 .modal {
   background-color: unset;
 }
@@ -168,6 +182,11 @@ body {
 #style-3::-webkit-scrollbar-thumb {
   background-color: #000000;
   height: 6px;
+}
+
+/* note editor */
+.ql-toolbar.ql-snow {
+  border: 0 !important;
 }
 
 /* Loader css */

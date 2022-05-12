@@ -1,6 +1,6 @@
-import { createContext, useContext } from "react";
-import { useReducer } from "react";
+import { createContext, useContext, useState, useReducer } from "react";
 import { AuthReducer } from "./AuthReducer";
+import { v4 as uuid } from "uuid";
 
 const AuthContext = createContext();
 
@@ -17,8 +17,25 @@ const AuthProvider = ({ children }) => {
   };
 
   const [userAuth, DispatchUserAuth] = useReducer(AuthReducer, intialValue);
+
+  const intialNotes = {
+    _id: uuid(),
+    title: "",
+    description: "",
+    color: "#ffffff",
+    isEdited: false,
+    isPinned: false,
+    label: "Home",
+    timestamp: new Date().toLocaleString(),
+    priority: "Low",
+  };
+
+  const [note, setNote] = useState(intialNotes);
+
   return (
-    <AuthContext.Provider value={{ userAuth, DispatchUserAuth }}>
+    <AuthContext.Provider
+      value={{ userAuth, DispatchUserAuth, note, setNote, intialNotes }}
+    >
       {children}
     </AuthContext.Provider>
   );

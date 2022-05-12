@@ -22,16 +22,16 @@ export const Menu = () => {
       <h3>Welcome {Firstname}</h3>
       <ul>
         <li>
-          <Link to="/"> Note List </Link>
+          <Link to="/homepage"> Note List </Link>
         </li>
         <li>
           <Link to="/">Label</Link>
         </li>
         <li>
-          <Link to="/">Archive</Link>
+          <Link to="/archives">Archives</Link>
         </li>
         <li>
-          <Link to="/">Trash</Link>
+          <Link to="/trash_note">Trash</Link>
         </li>
         <li onClick={logoutHandler}>
           <a href="#">Logout</a>
