@@ -44,7 +44,6 @@ export const Input = () => {
 
     const find = notes.some((item) => item._id === note._id);
     if (find) {
-      console.log("update karo eskp");
       updateNote(note, DispatchUserAuth);
       setNote(intialNotes);
     } else {
