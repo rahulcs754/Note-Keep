@@ -33,16 +33,18 @@ export const Nav = () => {
                   <MdNightlightRound size={28} onClick={themeHandler} />
                 </Link>
               </li>
-              <li>
-                <Link to="#" onClick={() => setShowmenu(!showmenu)}>
-                  <MdViewHeadline size={28} />
-                </Link>
-              </li>
+              {isUserLoggedIn ? (
+                <li>
+                  <Link to="#" onClick={() => setShowmenu(!showmenu)}>
+                    <MdViewHeadline size={28} />
+                  </Link>
+                </li>
+              ) : null}
             </ul>
           </header>
         </div>
       </div>
-      {showmenu ? <Menu /> : null}
+      {showmenu && isUserLoggedIn ? <Menu /> : null}
     </>
   );
 };

@@ -16,6 +16,7 @@
 
 .card_reset {
   margin: 1rem;
+  color: var(--dark-black);
 }
 
 .card_footer_reset {

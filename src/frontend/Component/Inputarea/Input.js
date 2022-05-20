@@ -11,8 +11,9 @@ import { Colors } from "../Colors/Colors";
 import { Editor } from "../Editor/Editor";
 import { useAuthData } from "../../Context/AuthContext";
 import { addNotes, updateNote } from "frontend/Services";
-
+import { useTheme } from "frontend/Context/ThemeContext";
 export const Input = () => {
+  const { theme } = useTheme();
   const {
     userAuth: { notes },
     DispatchUserAuth,

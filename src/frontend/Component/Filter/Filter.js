@@ -21,7 +21,8 @@ export const Filter = () => {
     filterDispatch({ type: "SET_PRIORITY", payload: e.target.value });
   };
 
-  const { sortByDate, priority, label } = filterState;
+  const { sortByDate, priorityFilter, labelFilter } = filterState;
+
   return (
     <>
       <div className={styles.filter_icon_box}>
@@ -29,19 +30,31 @@ export const Filter = () => {
       </div>
       {showFilterlist ? (
         <div className={styles.filter_list}>
-          <select className={styles.select_option} onChange={labelHandler}>
+          <select
+            className={styles.select_option}
+            value={labelFilter}
+            onChange={labelHandler}
+          >
             <option>Select Tag</option>
             <option>Home</option>
             <option>Work</option>
             <option>Exercise</option>
             <option>Other</option>
           </select>
-          <select className={styles.select_option} onChange={dateHandler}>
+          <select
+            className={styles.select_option}
+            value={sortByDate}
+            onChange={dateHandler}
+          >
             <option>Select Date Wise</option>
             <option>Old Date</option>
             <option>New Date</option>
           </select>
-          <select className={styles.select_option} onChange={priorityHandler}>
+          <select
+            className={styles.select_option}
+            value={priorityFilter}
+            onChange={priorityHandler}
+          >
             <option>Select Priority</option>
             <option>High</option>
             <option>Medium</option>

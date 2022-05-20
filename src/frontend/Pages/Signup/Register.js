@@ -2,9 +2,10 @@ import styles from "./Register.module.css";
 import { useState } from "react";
 import { signupCheck } from "frontend/utils/Signup";
 import { useNavigate, Link } from "react-router-dom";
-
+import { useTheme } from "frontend/Context/ThemeContext";
 export const Register = () => {
   const navigate = useNavigate();
+  const { theme } = useTheme();
   const [signupForm, setSignupForm] = useState({
     firstname: "",
     lastname: "",
@@ -62,7 +63,14 @@ export const Register = () => {
           </div>
         </>
       ) : (
-        <form className={styles.signup_form} onSubmit={submitHandler}>
+        <form
+          className={styles.signup_form}
+          onSubmit={submitHandler}
+          style={{
+            backgroundColor: theme === "dark" ? "white" : "",
+            color: theme === "dark" ? "black" : "",
+          }}
+        >
           <div className="flex flex-center">
             <img src="https://img.icons8.com/nolan/64/note.png" />
           </div>

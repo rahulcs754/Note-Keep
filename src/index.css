@@ -28,6 +28,9 @@ body {
 .modal {
   background-color: unset;
 }
+.ql-editor {
+  color: var(--dark-black);
+}
 
 /* Active link */
 .active_url {
@@ -90,7 +93,7 @@ body {
 
 .menu {
   position: absolute;
-  top: 46px;
+  top: 3.6rem;
   right: 0px;
   padding: 0.2rem 1.5rem;
   background: var(--mint-white);
@@ -159,7 +162,6 @@ body {
 /* scroll bar css */
 
 .scrollbar {
-  background: #f5f5f5;
   overflow-y: scroll;
 }
 
@@ -238,6 +240,10 @@ body {
 @media (max-width: 767px) {
   .rs-row {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .menu {
+    position: absolute;
+    top: 4.6rem;
   }
 
   .section_box {
