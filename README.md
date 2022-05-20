@@ -7,7 +7,7 @@
 <p align="center">
    A note keep is a open source app. That is used for store person notes.
   <br>
-  <a href="https://notekeep.vercel.app/"><strong>Explore Watch World »</strong></a>
+  <a href="https://notekeep.vercel.app/"><strong>Explore Note Keep »</strong></a>
   <br>
 </p>
 
