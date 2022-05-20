@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { useAuthData } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { loginCheck, guestEntry } from "../../utils/Login";
-
+import { useTheme } from "frontend/Context/ThemeContext";
 export const Login = () => {
   const navigate = useNavigate();
-
+  const { theme } = useTheme();
   const [login, setLogin] = useState({
     email: "",
     password: "",
@@ -53,7 +53,14 @@ export const Login = () => {
 
   return (
     <div className={`flex flex-center ${styles.login_box}`}>
-      <form className={styles.login_form} onSubmit={submitHandler}>
+      <form
+        className={styles.login_form}
+        onSubmit={submitHandler}
+        style={{
+          backgroundColor: theme === "dark" ? "white" : "",
+          color: theme === "dark" ? "black" : "",
+        }}
+      >
         <div className="flex flex-center">
           <img src="https://img.icons8.com/nolan/64/note.png" />
         </div>

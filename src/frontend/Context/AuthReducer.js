@@ -28,11 +28,27 @@ export const AuthReducer = (state, action) => {
         encodedToken: "",
         userDetails: {},
       };
+
     case "LOGIN_ERROR":
       return {
         ...state,
         loading: false,
         message: error,
+      };
+
+    case "SET_NOTES":
+      return { ...state, notes: payload };
+
+    case "UPDATE_TRASH":
+      return { ...state, trash: [...state.trash, payload] };
+
+    case "SET_ARCHIVES":
+      return { ...state, archives: payload };
+
+    case "REMOVE_FROM_TRASH":
+      return {
+        ...state,
+        trash: state.trash.filter((item) => item._id !== payload),
       };
     default:
       return state;

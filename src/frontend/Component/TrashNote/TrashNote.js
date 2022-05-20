@@ -1,12 +1,9 @@
-import styles from "./Note.module.css";
+import styles from "./TrashNote.module.css";
 import { VscTrash } from "react-icons/vsc";
-import { removeNotes } from "frontend/Services";
-import { MdMoreHoriz, MdOutlineEdit } from "react-icons/md";
-import { MdArchive } from "react-icons/md";
-import { addArchives } from "frontend/Services";
+import { MdMoreHoriz } from "react-icons/md";
 import { useAuthData } from "frontend/Context";
-
-export const Note = ({
+import { toast } from "react-toastify";
+export const TrashNote = ({
   _id,
   title,
   description,
@@ -30,9 +27,9 @@ export const Note = ({
     priority,
   };
 
-  const editNoteHandler = (note) => {
-    setNote(note);
-    setNote((note) => ({ ...note, isEdited: true }));
+  const deleteHandler = () => {
+    dispatchUserData({ type: "REMOVE_FROM_TRASH", payload: _id });
+    toast.success("Deleted Note Successfully");
   };
 
   return (
@@ -46,18 +43,7 @@ export const Note = ({
         <span className={`${styles.remove_icon} pointer`}>
           <MdMoreHoriz className={styles.menu_icons} />
           <div className={`flex flex-row ${styles.monu_show}`}>
-            <MdArchive
-              size={28}
-              onClick={() => addArchives(currNote, dispatchUserData)}
-            />
-            <MdOutlineEdit
-              size={28}
-              onClick={() => editNoteHandler(currNote)}
-            />
-            <VscTrash
-              onClick={() => removeNotes(currNote, dispatchUserData)}
-              size={28}
-            />
+            <VscTrash onClick={deleteHandler} size={28} />
           </div>
         </span>
       </div>
