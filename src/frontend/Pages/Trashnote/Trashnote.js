@@ -34,7 +34,7 @@ export const Trashnote = () => {
       </div>
       {trash.length === 0 && (
         <div className="text-center">
-          <h2>You have not trash note yet</h2>
+          <h2>You have not any note </h2>
         </div>
       )}
     </>
