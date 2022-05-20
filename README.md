@@ -27,7 +27,7 @@
 ## USE The App
 
 <a href="https://notekeep.vercel.app/">
-   Watch World
+   Note Keep
 </a>
 
 ## How to Install and Run the Project
